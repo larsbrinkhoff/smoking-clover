@@ -1,0 +1,34 @@
+2002-04-09    <pace@xterm.pacew.com>
+
+	* V9
+	
+	* first sourceforge checkin
+
+	* V8
+	
+	* attempt to handle pseudo color, but doesn't work
+
+	* V7
+	
+	* directcolor support works
+
+	* V6
+	
+	* start to separate gtk stuff from core drawer
+
+	* V5
+	
+	* rough handling of direct color and images
+
+	* V4
+
+	* movie stuff leading to first vcd
+
+2002-04-08    <pace@xterm.pacew.com>
+
+	* V3
+	
+	* V2
+
+	* V1
+

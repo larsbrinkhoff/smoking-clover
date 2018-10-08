@@ -1,0 +1,19 @@
+diagonals
+resize
+speed control
+edges
+real time (xsync?)
+handle real colormaps
+credits
+configure stuff
+quit key
+all aspect ratios
+check malloc returns
+make some global variables static
+set radius based on window size
+make counts unsigned
+sometimes, after a bunch of resizes, it stops getting configure events
+	maybe, one of the sizes has to be really big?
+byte order for image
+more than 256 colors
+

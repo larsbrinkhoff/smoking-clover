@@ -1,0 +1,27 @@
+An attempt at reconstructing Smoking Clover, the Lisp Machine graphics
+hack by Bill Gosper.
+
+Pace Willisson
+pace@alum.mit.edu
+April 2002
+
+Repository: http://sourceforge.net/projects/clover/
+
+The code for drawing the clover itself is taken from the X11 port by
+Kenneth Stailey (around 1989).
+
+My main changes:
+
+* color cube walk, as suggested by Ed Swalenberg in a message to
+ITS-Lovers April 4, 2002.
+
+* GTK port
+
+* remove requirement to run on a psuedo color visual
+
+Currently, it compiles and runs nicely on a RedHat 7.2 pentium system
+with at 16 bit display.  I've done a little bit on support for pseudo
+color, but that doesn't work yet.
+
+This is still a work in progress.  See the file BUGS for the main open
+issues.
