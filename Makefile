@@ -1,5 +1,5 @@
-CFLAGS = -g -Wall `gtk-config --cflags`
-LIBS = `gtk-config --libs`
+CFLAGS = -g -Wall `pkg-config --cflags gtk+-2.0`
+LIBS = `pkg-config --libs gtk+-2.0` -lm
 
 SRCS = README COPYING ChangeLog BUGS Makefile *.[ch] 
 
