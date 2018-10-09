@@ -1,0 +1,57 @@
+.TH clover 1 "6 March 1989" "X Version 11"
+.SH NAME
+clover \- a color map hack for X
+.SH SYNTAX
+.B clover
+[ \fIoptions\fR ]
+.SH DESCRIPTION
+.I Clover
+draws a symmetric image and animates it by manipulating the display's 
+colormap.
+Clover tries very hard to be ICCCM compliant, which means that it counts
+on the window manager to install its private color map. The animation won't be
+apparent until you get the window manager's attention (usually by directing
+input focus to clover's window).
+.PP
+The animation speed varies \- clicking in the window resets the delay between
+steps to the inital value.
+Typing 'q' in the window terminates the program.
+.SH OPTIONS
+In addition to the standard X toolkit command line and resource options, 
+.I clover
+understands three others:
+.TP
+.BI -colors \ n
+Use
+at most 
+.I n
+colormap cells for the animation. 
+The default is MAX(15, sizeof(colorMap)). 
+More colors make for a more interesting display, but can slow things down
+considerably.
+.TP
+.BI -radius \ r
+Use 
+.I r
+as the `radius' of the image.
+.TP
+.BI -speed \ s
+Use
+.I s
+as the inital delay between steps in the animation.
+.PP
+The default geometry value covers the entire display.
+.SH NOTE
+.I Clover
+can only run on a display with a 
+.IR PseudoColor ,
+.IR DirectColor ,
+or
+.I GrayScale
+visual.
+
+It probably won't work right under uwm.
+.SH AUTHOR
+Christopher A. Kent (DECWRL)
+.br
+Algorithm originally due to Bill Gosper, on the MIT Lisp Machine.

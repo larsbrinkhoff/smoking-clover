@@ -1,0 +1,8 @@
+  SYS_LIBRARIES = $(XTOOLLIB) $(XMULIB) $(XLIB)
+LOCAL_LIBRARIES = 
+           SRCS = clover.c
+           OBJS = clover.o
+
+ComplexProgramTarget(clover)
+NormalLintTarget($(SRCS))
+
