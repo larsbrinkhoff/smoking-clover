@@ -1,7 +1,7 @@
-CFLAGS = -g -Wall `gtk-config --cflags`
-LIBS = `gtk-config --libs`
+CFLAGS = -g -Wall `pkg-config --cflags gtk+-2.0`
+LIBS = `pkg-config --libs gtk+-2.0`
 
-SRCS = README COPYING ChangeLog BUGS Makefile *.[ch] 
+SRCS = README COPYING ChangeLog BUGS Makefile *.[ch]
 
 CLOVER_OBJS = clover.o common.o direct.o true.o rgb.o
 clover: $(CLOVER_OBJS)
