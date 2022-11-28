@@ -6,17 +6,18 @@
 #include <time.h>
 #include <math.h>
 
-enum {
+enum lines_enum {
 	s_lines,
 	s_dup,
 	s_run,
-} lines_state;
+};
+extern enum lines_enum lines_state;
 
 /* values are 0..1 */
 struct colors {
 	double r, g, b;
 };
-struct colors *colors;
+extern struct colors *colors;
 
 void make_colors (void);
 void set_size (int width, int height);
@@ -24,13 +25,13 @@ void next_color (int steps);
 void redraw_lines (void);
 void redraw_dup (void);
 
-unsigned int *counts;
+extern unsigned int *counts;
 
-int width, height;
-int maxX, maxY;
-int midX, midY;
+extern int width, height;
+extern int maxX, maxY;
+extern int midX, midY;
 
-int ncolors;
+extern int ncolors;
 
 struct output_handler {
 	void (*init)(void);
@@ -38,13 +39,13 @@ struct output_handler {
 	void (*redraw)(int counts_changed);
 };
 
-struct output_handler *direct_output_handler;
-struct output_handler *true_output_handler;
-struct output_handler *rgb_output_handler;
+extern struct output_handler *direct_output_handler; /* defined in direct.c */
+extern struct output_handler *true_output_handler; /* defined in true.c */
+extern struct output_handler *rgb_output_handler; /* defined in rgb.c */
 
 
 /* ... */
 #include <gtk/gtk.h>
-GtkWidget *main_area;
-GdkPixmap *main_pixmap;
-GtkWidget *main_window;
+extern GtkWidget *main_area;
+extern GdkPixmap *main_pixmap;
+extern GtkWidget *main_window;

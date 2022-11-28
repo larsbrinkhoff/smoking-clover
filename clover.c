@@ -2,7 +2,19 @@
 
 #include <gtk/gtk.h>
 
+GtkWidget *main_area;
+GdkPixmap *main_pixmap;
+GtkWidget *main_window;
+
 struct output_handler *output_handler;
+struct colors *colors;
+unsigned int *counts;
+int width, height;
+int maxX, maxY;
+int midX, midY;
+int ncolors;
+
+enum lines_enum lines_state;
 
 void make_movie_init (void);
 
